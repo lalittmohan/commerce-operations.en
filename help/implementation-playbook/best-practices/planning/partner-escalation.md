@@ -3,9 +3,8 @@ title: Partner escalation best practices
 description: Learn how to prepare for escalating a partner issue with an Adobe Adobe Account Team or how to avoid an escalation.
 role: User
 feature: Best Practices
-feature-set: Commerce
+exl-id: 9ead032b-93f5-4327-9f01-5320270025ce
 ---
-
 # Partner escalation best practices
 
 Below are ideas to help you prepare for a Partner escalation with an Adobe Account Team or to avoid the escalation entirely.

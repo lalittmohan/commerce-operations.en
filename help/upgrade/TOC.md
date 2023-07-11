@@ -1,6 +1,8 @@
 ---
 user-guide-title: Upgrade Guide
 user-guide-description: Learn why upgrading your Adobe Commerce application is so important and how to successfully plan and execute an upgrade.
+feature: Upgrade
+topic: Administration, Commerce, Development, Upgrade
 ---
 
 # Upgrade Guide {#upgrade-guide}

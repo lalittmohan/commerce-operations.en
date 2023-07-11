@@ -2,10 +2,9 @@
 title: Best practices for Redis service configuration
 description: Learn how to improve caching performance by using the extended Redis cache implementation for Adobe Commerce.
 role: Developer, Admin
-feature-set: Commerce
-feature: Best Practices
+feature: Best Practices, Cache
+exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
 ---
-
 # Best practices for Redis service configuration
 
 - Use the extended Redis cache implementation, which includes the following optimizations to minimize the number of Redis queries that are performed on each request from Adobe Commerce:
@@ -97,7 +96,7 @@ Separating the Redis cache from Redis session allows you to manage the cache and
    ```yaml
    SESSION_CONFIGURATION:
      _merge: true
-    redis:
+     redis:
        port: 6374       # check the port in $MAGENTO_CLOUD_RELATIONSHIPS
        timeout: 5
        disable_locking: 1
@@ -136,14 +135,14 @@ stage:
   deploy:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
     CACHE_CONFIGURATION:
-    _merge: true;
+      _merge: true;
       frontend:
         default:
-            backend_options:
-              compress_data: 4              # 0-9
-              compress_tags: 4              # 0-9
-              compress_threshold: 20480     # don't compress files smaller than this value
-              compression_lib: 'gzip'       # snappy and lzf for performance, gzip for high compression (~69%)
+          backend_options:
+            compress_data: 4              # 0-9
+            compress_tags: 4              # 0-9
+            compress_threshold: 20480     # don't compress files smaller than this value
+            compression_lib: 'gzip'       # snappy and lzf for performance, gzip for high compression (~69%)
 ```
 
 ## Additional information
